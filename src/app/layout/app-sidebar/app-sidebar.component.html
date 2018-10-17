@@ -1,3 +1,19 @@
-<p>
-  app-sidebar works!
-</p>
+<i class="fa fa-bars icon-menu" aria-hidden="true" id="btn-sidenav-demo"></i>
+<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'" #sidenav>
+  <mz-sidenav-header>
+    <li class="sidenav-header"><span class="username">USUÁRIO</span> </li>
+  </mz-sidenav-header>
+
+  <mz-sidenav-link (click)="sidenav.opened = !sidenav.opened">
+    <a class="waves-effect"><i class="fa fa-address-book-o" aria-hidden="true"></i><span class="">Agendar
+        Notas</span></a>
+  </mz-sidenav-link>
+
+  <mz-sidenav-divider></mz-sidenav-divider>
+
+  <mz-sidenav-link (click)="sidenav.opened = !sidenav.opened">
+    <a class="waves-effect"><i class="fa fa-address-book-o" aria-hidden="true"></i><span class="">Ver
+        Notas</span></a>
+  </mz-sidenav-link>
+
+</mz-sidenav>

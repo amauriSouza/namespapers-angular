@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './layout/app-header/app-header.component';
 import { AppFooterComponent } from './layout/app-footer/app-footer.component';
 import { AppSidebarComponent } from './layout/app-sidebar/app-sidebar.component';
-import { MzButtonModule, MzNavbarModule, MzDropdownModule} from 'ngx-materialize';
+import { MzButtonModule, MzNavbarModule, MzDropdownModule, MzSidenavModule} from 'ngx-materialize';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { MzButtonModule, MzNavbarModule, MzDropdownModule} from 'ngx-materialize
     BrowserModule,
     MzButtonModule,
     MzNavbarModule,
-    MzDropdownModule
+    MzDropdownModule,
+    MzSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

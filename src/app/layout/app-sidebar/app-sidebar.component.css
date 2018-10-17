@@ -1,0 +1,29 @@
+
+.icon-menu{
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 11px;
+  font-size: 22px;
+}
+
+.sidenav-header{
+  background: #1976d2;
+  color: #fff;
+  height: 150px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.username{
+  margin-left: 10px;
+}
+
+.icon-sidebar{
+  font-size: 22px;
+  margin-top: -4px;
+}
+
+.font-sidebar{
+  margin-left: -15px;
+}
