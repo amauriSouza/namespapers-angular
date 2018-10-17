@@ -1,3 +1,18 @@
-<p>
-  app-header works!
-</p>
+<mz-navbar>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo"><i class="fa fa-address-book-o mr-5 size-icon" aria-hidden="true"></i>Agenda+</a>
+    <mz-navbar-item-container [align]="'right'">
+      <mz-navbar-item>
+        <mz-dropdown [id]="'dropdown-demo'" [align]="'left'" [belowOrigin]="false" [constrainWidth]="true"
+          [dropdownButtonId]="'btn-dropdown-demo'" [gutter]="true" [hover]="true" [inDuration]="300" [outDuration]="300"
+          [stopPropagation]="true">
+          <mz-dropdown-item><a href="#!">Perfil</a></mz-dropdown-item>
+          <mz-dropdown-divider></mz-dropdown-divider>
+          <mz-dropdown-item><a href="#!">Sair</a></mz-dropdown-item>
+        </mz-dropdown>
+        <a mz-button id="btn-dropdown-demo" class="drop" href="#"><i class="fa fa-user-circle-o mr-5"></i><span>Usuário</span></a>
+      </mz-navbar-item>
+
+    </mz-navbar-item-container>
+  </div>
+</mz-navbar>
