@@ -1,0 +1,101 @@
+.template-task {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0 0 25px;
+}
+
+.icons-style {
+  font-size: 20px;
+  margin-right: 5px;
+  color: #424242;
+}
+
+.title-box {
+  color: #424242;
+}
+
+.title-card {
+  color: #424242;
+}
+
+.content-cards {
+  width: 90%;
+}
+
+.content-buttons {
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.display-flexivel {
+  display: flex;
+}
+
+.column-30 {
+  width: 30%;
+}
+
+.input-photo {
+  width: 30%;
+}
+
+.column-7 {
+  width: 70%;
+}
+
+.margin-top__inputs {
+  margin-top: 35px;
+}
+
+.photo-worker {
+  height: 250px;
+}
+
+.margin-left__20 {
+  margin-left: 20px;
+}
+
+.margin-top__10 {
+  margin-top: 10px;
+}
+
+.column-15 {
+  width: 15%;
+}
+
+.btn-floating {
+  width: 55px;
+  height: 55px;
+  margin: 8px;
+  background-color: #424242;
+}
+
+.search-container {
+  @extend %space-between;
+  flex-wrap: wrap;
+}
+
+.btn-content {
+  @extend %center;
+  flex-wrap: wrap;
+}
+
+.btn-content button {
+  margin: 10px;
+}
+
+.input-files__flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-inputs {
+  width: 30%;
+}

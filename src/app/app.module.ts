@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './layout/app-header/app-header.component';
 import { AppFooterComponent } from './layout/app-footer/app-footer.component';
 import { AppSidebarComponent } from './layout/app-sidebar/app-sidebar.component';
-import { MzButtonModule, MzNavbarModule, MzDropdownModule, MzSidenavModule} from 'ngx-materialize';
+import { MzIconModule, MzIconMdiModule, MzNavbarModule, MzCollapsibleModule, MzCheckboxModule, MzSidenavModule, MzCollectionModule, MzButtonModule, MzInputModule, MzCardModule, MzSelectModule, MzTooltipModule, MzChipModule, MzDatepickerModule, MzDropdownModule} from 'ngx-materialize';
 import { TasksComponent } from './tasks/tasks.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -22,10 +22,22 @@ import { LoginComponent } from './auth/login/login.component';
   ],
   imports: [
     BrowserModule,
-    MzButtonModule,
     MzNavbarModule,
+    MzCollapsibleModule,
+    MzSidenavModule,
+    MzButtonModule,
+    MzInputModule,
+    MzCardModule,
+    MzSelectModule,
+    MzTooltipModule,
+    MzChipModule,
+    MzDatepickerModule,
     MzDropdownModule,
-    MzSidenavModule
+    MzCollectionModule,
+    MzCheckboxModule,
+    MzIconModule,
+    MzIconMdiModule,
+    MzCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,35 @@
-<p>
-  tasks works!
-</p>
+<div class="template-task">
+  <div class="content-cards">
+    <mz-card class="black-text" [horizontal]="true" [hoverable]="true">
+      <mz-card-title>
+        <span class="title-card">Tarefas</span>
+      </mz-card-title>
+      <mz-card-content>
+        <mz-collapsible [mode]="'accordion'" [onClose]="closeFunctionCallback" [onOpen]="openFunctionCallback" [popout]="false">
+          <mz-collapsible-item #dadosPessoaisCollapsibleItem [active]="false">
+            <mz-collapsible-item-header>
+              <i class="fa fa-address-book-o icons-style" id="icoDadosPessoais" aria-hidden="true"></i><span class="title-box">Criar Tarefa</span>
+            </mz-collapsible-item-header>
+            <mz-collapsible-item-body>
+              <div class="content-form">
+                <div class="column-inputs">
+                  <mz-input-container>
+                    <input mz-input [label]="'Nome'" [validate]="true" id="subscription" type="text"
+                      formControlName="subscription">
+                  </mz-input-container>
+                </div>
+              </div>
+            </mz-collapsible-item-body>
+          </mz-collapsible-item>
+        </mz-collapsible>
+      </mz-card-content>
+    </mz-card>
+  </div>
+
+
+  <div class="content-buttons z-depth-5">
+    <button mz-button mz-halfway-fab [float]="true" mz-button mz-tooltip [tooltip]="'Expandir Todos'"
+      [position]="'left'" [html]="true" [delay]="10"><i class="fa fa-expand size-icon" aria-hidden="true"></i></button>
+  </div>
+
+</div>
