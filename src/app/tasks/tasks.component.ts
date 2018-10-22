@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { MzCollapsibleComponent } from 'ngx-materialize';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -14,6 +16,7 @@ export class TasksComponent implements OnInit {
 
   public dateOfBirth = '2017-08-12';
   public data: any;
+  public taskForm: FormGroup;
 
   public options: Pickadate.DateOptions = {
     clear: 'Limpar', // Clear button text
@@ -66,7 +69,15 @@ export class TasksComponent implements OnInit {
     weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
   };
 
-  constructor() {}
+  constructor(formBuilder: FormBuilder) {
+    this.taskForm = formBuilder.group({
+      id: [''],
+      title: ['', Validators.required],
+      dtInitial: ['', ],
+      dtEnd: ['', ],
+      description: ['', Validators.required]
+  });
+  }
 
   ngOnInit() {
     this.data = [

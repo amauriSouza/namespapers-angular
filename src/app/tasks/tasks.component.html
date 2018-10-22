@@ -5,57 +5,60 @@
         <span class="title-card">Tarefas</span>
       </mz-card-title>
       <mz-card-content>
-        <mz-collapsible #collapsibleCreateTasks [mode]="'accordion'" [onClose]="closeFunctionCallback" [onOpen]="openFunctionCallback" [popout]="false">
-          <mz-collapsible-item [active]="false">
-            <mz-collapsible-item-header>
-              <i class="fa fa-address-book-o icons-style" id="icoDadosPessoais" aria-hidden="true"></i><span class="title-box">Criação
-                Tarefa</span>
-            </mz-collapsible-item-header>
-            <mz-collapsible-item-body>
-              <div class="content-form">
-                <div class="column-30">
-                  <mz-input-container>
-                    <input mz-input [label]="'Titulo tarefa'" [validate]="true" id="" type="text" formControlName=""
-                      placeholder="Digite um titulo">
-                  </mz-input-container>
-                </div>
-                <div class="column-30">
-                  <mz-datepicker-container class="col s12">
-                    <i mz-icon-mdi mz-input-prefix>
-                    </i>
-                    <input mz-datepicker [label]="'Data Início'" [options]="options" id="datepicker" placeholder="Selecione uma data"
-                      type="text">
-                  </mz-datepicker-container>
+        <!-- <form [formGroup]="taskForm"> -->
+          <mz-collapsible #collapsibleCreateTasks [mode]="'accordion'" [onClose]="closeFunctionCallback" [onOpen]="openFunctionCallback"
+            [popout]="false">
+            <mz-collapsible-item [active]="false">
+              <mz-collapsible-item-header>
+                <i class="fa fa-address-book-o icons-style" id="icoDadosPessoais" aria-hidden="true"></i><span class="title-box">Criação
+                  Tarefa</span>
+              </mz-collapsible-item-header>
+              <mz-collapsible-item-body>
+                <div class="content-form">
+                  <div class="column-30">
+                    <mz-input-container>
+                      <input mz-input [label]="'Titulo tarefa'" id="title" length="25" type="text" formControlName="title"
+                        placeholder="Digite um titulo">
+                    </mz-input-container>
+                  </div>
+                  <div class="column-30">
+                    <mz-datepicker-container class="col s12">
+                      <i mz-icon-mdi mz-input-prefix>
+                      </i>
+                      <input mz-datepicker [label]="'Data Início'" [options]="options" id="datepicker" placeholder="Selecione uma data"
+                        type="text">
+                    </mz-datepicker-container>
+                  </div>
+
+                  <div class="column-30">
+                    <mz-datepicker-container class="col s12">
+                      <i mz-icon-mdi mz-input-prefix>
+                      </i>
+                      <input mz-datepicker [label]="'Date Termíno'" [options]="options" id="datepicker" placeholder="Selecione uma data"
+                        type="text">
+                    </mz-datepicker-container>
+                  </div>
                 </div>
 
-                <div class="column-30">
-                  <mz-datepicker-container class="col s12">
-                    <i mz-icon-mdi mz-input-prefix>
-                    </i>
-                    <input mz-datepicker [label]="'Date Termíno'" [options]="options" id="datepicker" placeholder="Selecione uma data"
-                      type="text">
-                  </mz-datepicker-container>
+                <div class="content-form">
+                  <div class="column-100">
+                    <mz-textarea-container>
+                      <textarea mz-textarea [label]="'Descrição da Tarefa'" id="" placeholder="Digite uma descrição"
+                        length="100"></textarea>
+                    </mz-textarea-container>
+                  </div>
                 </div>
-              </div>
 
-              <div class="content-form">
-                <div class="column-100">
-                  <mz-textarea-container>
-                    <textarea mz-textarea [label]="'Descrição da Tarefa'" id="" placeholder="Digite uma descrição"
-                      length="100"></textarea>
-                  </mz-textarea-container>
+                <div class="content-position">
+                  <button mz-button class="style-button">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Salvar
+                  </button>
                 </div>
-              </div>
 
-              <div class="content-position">
-                <button mz-button class="style-button">
-                  <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Salvar
-                </button>
-              </div>
-
-            </mz-collapsible-item-body>
-          </mz-collapsible-item>
-        </mz-collapsible>
+              </mz-collapsible-item-body>
+            </mz-collapsible-item>
+          </mz-collapsible>
+        <!-- </form> -->
       </mz-card-content>
     </mz-card>
 
@@ -64,7 +67,8 @@
         <span class="title-card">Tarefas</span>
       </mz-card-title>
       <mz-card-content>
-        <mz-collapsible #collapsibleMyTasks [mode]="'accordion'" [onClose]="closeFunctionCallback" [onOpen]="openFunctionCallback" [popout]="false">
+        <mz-collapsible #collapsibleMyTasks [mode]="'accordion'" [onClose]="closeFunctionCallback" [onOpen]="openFunctionCallback"
+          [popout]="false">
           <mz-collapsible-item #dadosPessoaisCollapsibleItem [active]="false">
             <mz-collapsible-item-header>
               <i class="fa fa-list-ol icons-style" id="icoDadosPessoais" aria-hidden="true"></i><span class="title-box">Minhas
@@ -98,7 +102,8 @@
                     <td>{{data.dtInitial}}</td>
                     <td>{{data.dtEnd}}</td>
                     <td>{{data.description}}</td>
-                    <td><i class="fa fa-pencil-square-o icons-style" aria-hidden="true"></i><i class="fa fa-check-circle-o icons-style" aria-hidden="true"></i></td>
+                    <td><i class="fa fa-pencil-square-o icons-style" aria-hidden="true"></i><i class="fa fa-check-circle-o icons-style"
+                        aria-hidden="true"></i></td>
                   </tr>
                 </tbody>
                 <tfoot>
