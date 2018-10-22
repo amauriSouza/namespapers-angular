@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ViewChild } from '@angular/core';
+import { MzCollapsibleComponent } from 'ngx-materialize';
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
+  @ViewChild('collapsibleCreateTasks')
+  collapsibleCreateTasks: MzCollapsibleComponent;
+  @ViewChild('collapsibleMyTasks')
+  collapsibleMyTasks: MzCollapsibleComponent;
+
   public dateOfBirth = '2017-08-12';
   public data: any;
 
@@ -68,50 +74,63 @@ export class TasksComponent implements OnInit {
         title: 'Lorem 1',
         dtInitial: '19/10/2018',
         dtEnd: '20/10/2018',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+        description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
       },
       {
         title: 'Lorem 1',
         dtInitial: '19/10/2018',
         dtEnd: '20/10/2018',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+        description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
       },
       {
         title: 'Lorem 1',
         dtInitial: '19/10/2018',
         dtEnd: '20/10/2018',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+        description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
       },
       {
         title: 'Lorem 1',
         dtInitial: '19/10/2018',
         dtEnd: '20/10/2018',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+        description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
       },
       {
         title: 'Lorem 1',
         dtInitial: '19/10/2018',
         dtEnd: '20/10/2018',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+        description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
       },
       {
         title: 'Lorem 1',
         dtInitial: '19/10/2018',
         dtEnd: '20/10/2018',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+        description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
       },
       {
         title: 'Lorem 1',
         dtInitial: '19/10/2018',
         dtEnd: '20/10/2018',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+        description:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
       }
-
-
-
-
-
-
     ];
+  }
+
+  expandAll() {
+    this.collapsibleCreateTasks.close(0);
+    this.collapsibleCreateTasks.open(0);
+    this.collapsibleMyTasks.close(0);
+    this.collapsibleMyTasks.open(0);
+  }
+
+  closeAll() {
+    this.collapsibleCreateTasks.close(0);
+    this.collapsibleMyTasks.close(0);
   }
 }
