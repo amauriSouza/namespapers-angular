@@ -3,17 +3,35 @@
   margin-left: 40px;
 }
 
-.nav-wrapper{
+.nav-wrapper {
   background-color: #1976d2;
 }
 
-.drop{
+.drop {
   background-color: #1976d2 !important;
 }
 
-.mr-5{
+.mr-5 {
   margin-right: 5px;
 }
 
+.z-depth-1-half,
+.btn:hover,
+.btn-large:hover,
+.btn-floating:hover {
+  box-shadow: none;
+}
 
-
+.z-depth-1,
+nav,
+.card-panel,
+.card,
+.toast,
+.btn,
+.btn-large,
+.btn-floating,
+.dropdown-content,
+.collapsible,
+.side-nav {
+  box-shadow: none;
+}

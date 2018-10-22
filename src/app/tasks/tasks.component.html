@@ -8,17 +8,52 @@
         <mz-collapsible [mode]="'accordion'" [onClose]="closeFunctionCallback" [onOpen]="openFunctionCallback" [popout]="false">
           <mz-collapsible-item #dadosPessoaisCollapsibleItem [active]="false">
             <mz-collapsible-item-header>
-              <i class="fa fa-address-book-o icons-style" id="icoDadosPessoais" aria-hidden="true"></i><span class="title-box">Criar Tarefa</span>
+              <i class="fa fa-address-book-o icons-style" id="icoDadosPessoais" aria-hidden="true"></i><span class="title-box">Criação
+                Tarefa</span>
             </mz-collapsible-item-header>
             <mz-collapsible-item-body>
               <div class="content-form">
-                <div class="column-inputs">
+                <div class="column-30">
                   <mz-input-container>
-                    <input mz-input [label]="'Nome'" [validate]="true" id="subscription" type="text"
-                      formControlName="subscription">
+                    <input mz-input [label]="'Titulo tarefa'" [validate]="true" id="" type="text" formControlName=""
+                      placeholder="Digite um titulo">
                   </mz-input-container>
                 </div>
+                <div class="column-30">
+                  <mz-datepicker-container class="col s12">
+                    <i mz-icon-mdi mz-input-prefix>
+                    </i>
+                    <input mz-datepicker [label]="'Data Início'" [options]="options" id="datepicker" placeholder="Selecione uma data"
+                      type="text">
+                  </mz-datepicker-container>
+                </div>
+
+                <div class="column-30">
+                  <mz-datepicker-container class="col s12">
+                    <i mz-icon-mdi mz-input-prefix>
+                    </i>
+                    <input mz-datepicker [label]="'Date Termíno'" [options]="options" id="datepicker" placeholder="Selecione uma data"
+                      type="text">
+                  </mz-datepicker-container>
+                </div>
               </div>
+
+              <div class="content-form">
+                <div class="column-100">
+                  <mz-textarea-container>
+                    <textarea mz-textarea [label]="'Descrição da Tarefa'" id="" placeholder="Digite uma descrição"
+                      length="100"></textarea>
+                  </mz-textarea-container>
+                </div>
+              </div>
+
+              <div class="content-position">
+                <button mz-button class="style-button">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Salvar
+                </button>
+
+              </div>
+
             </mz-collapsible-item-body>
           </mz-collapsible-item>
         </mz-collapsible>
@@ -28,8 +63,14 @@
 
 
   <div class="content-buttons z-depth-5">
-    <button mz-button mz-halfway-fab [float]="true" mz-button mz-tooltip [tooltip]="'Expandir Todos'"
-      [position]="'left'" [html]="true" [delay]="10"><i class="fa fa-expand size-icon" aria-hidden="true"></i></button>
+    <button mz-button mz-halfway-fab [float]="true" mz-button mz-tooltip [tooltip]="'Expandir Todos'" [position]="'left'"
+      [html]="true" [delay]="10"><i class="fa fa-expand size-icon" aria-hidden="true"></i></button>
+
+    <button mz-button mz-halfway-fab [float]="true" mz-button mz-tooltip [tooltip]="'Fechar Todos'" [position]="'left'"
+      [html]="true" [delay]="10"><i class="fa fa-compress size-icon" aria-hidden="true"></i></button>
+
+    <button mz-button mz-halfway-fab [float]="true" mz-button mz-tooltip [tooltip]="'Fechar Todos'" [position]="'left'"
+      [html]="true" [delay]="10"><i class="fa fa-eraser size-icon" aria-hidden="true"></i></button>
   </div>
 
 </div>
