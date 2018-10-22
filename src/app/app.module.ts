@@ -22,6 +22,7 @@ import {
 import { TasksComponent } from './tasks/tasks.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
+import {DataTableModule} from 'angular-6-datatable';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { LoginComponent } from './auth/login/login.component';
     MzDatepickerModule,
     MzDropdownModule,
     MzCollectionModule,
-    MzTextareaModule
+    MzTextareaModule,
+    DataTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

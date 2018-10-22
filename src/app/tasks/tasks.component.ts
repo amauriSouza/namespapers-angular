@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
+  public dateOfBirth = '2017-08-12';
+  public data: any;
+
   public options: Pickadate.DateOptions = {
     clear: 'Limpar', // Clear button text
     close: 'Ok', // Ok button text
@@ -56,8 +59,59 @@ export class TasksComponent implements OnInit {
     ],
     weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
   };
-  public dateOfBirth = '2017-08-12';
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.data = [
+      {
+        title: 'Lorem 1',
+        dtInitial: '19/10/2018',
+        dtEnd: '20/10/2018',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+      },
+      {
+        title: 'Lorem 1',
+        dtInitial: '19/10/2018',
+        dtEnd: '20/10/2018',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+      },
+      {
+        title: 'Lorem 1',
+        dtInitial: '19/10/2018',
+        dtEnd: '20/10/2018',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+      },
+      {
+        title: 'Lorem 1',
+        dtInitial: '19/10/2018',
+        dtEnd: '20/10/2018',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+      },
+      {
+        title: 'Lorem 1',
+        dtInitial: '19/10/2018',
+        dtEnd: '20/10/2018',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+      },
+      {
+        title: 'Lorem 1',
+        dtInitial: '19/10/2018',
+        dtEnd: '20/10/2018',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+      },
+      {
+        title: 'Lorem 1',
+        dtInitial: '19/10/2018',
+        dtEnd: '20/10/2018',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+      }
+
+
+
+
+
+
+    ];
+  }
 }
