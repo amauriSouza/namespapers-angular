@@ -45,3 +45,8 @@ textarea.materialize-textarea:focus:not([readonly]) {
 .side-nav .user-view, .side-nav .userView {
   background-color: #1976d2;
 }
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: #1976d2;
+  font-weight: bold;
+}
