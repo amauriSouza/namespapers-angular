@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './layout/app-header/app-header.component';
@@ -23,6 +25,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import {DataTableModule} from 'angular-6-datatable';
+import { ProfileComponent } from './user/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import {DataTableModule} from 'angular-6-datatable';
     AppSidebarComponent,
     TasksComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,8 @@ import {DataTableModule} from 'angular-6-datatable';
     MzDropdownModule,
     MzCollectionModule,
     MzTextareaModule,
-    DataTableModule
+    DataTableModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,7 +6,7 @@
         <mz-dropdown [id]="'dropdown-demo'" [align]="'left'" [belowOrigin]="false" [constrainWidth]="true"
           [dropdownButtonId]="'btn-dropdown-demo'" [gutter]="true" [hover]="true" [inDuration]="300" [outDuration]="300"
           [stopPropagation]="true">
-          <mz-dropdown-item><a href="#!">Perfil</a></mz-dropdown-item>
+          <mz-dropdown-item><a [routerLink]="['/profile']">Perfil</a></mz-dropdown-item>
           <mz-dropdown-divider></mz-dropdown-divider>
           <mz-dropdown-item><a href="#!">Sair</a></mz-dropdown-item>
         </mz-dropdown>
