@@ -1,0 +1,88 @@
+.template-dashboard{
+  padding: 15px;
+}
+
+.icon-card{
+  font-size: 26px;
+  color: #424242;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+
+.template-task {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0 0 25px;
+}
+
+.icons-style {
+  font-size: 20px;
+  margin-right: 5px;
+  color: #424242;
+}
+
+.icons-style__table{
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.title-box {
+  color: #424242;
+}
+
+.title-card {
+  color: #424242;
+}
+
+.content-cards {
+  width: 90%;
+}
+
+.content-buttons {
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-30 {
+  width: 30%;
+}
+
+.column-20 {
+  width: 20%;
+}
+
+.column-100 {
+  width: 100%;
+}
+
+.column-15 {
+  width: 15%;
+}
+
+.column-10 {
+  width: 10%;
+}
+
+.btn-floating {
+  width: 55px;
+  height: 55px;
+  margin: 8px;
+  background-color: #424242;
+}
+.column-50 {
+  width: 50%;
+}
+
+.style-button{
+  background-color: #424242;
+  border-radius: 20px;
+  text-transform: none;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: #424242;
+}
+

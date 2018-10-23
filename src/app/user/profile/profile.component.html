@@ -1,3 +1,59 @@
-<p>
-  profile works!
-</p>
+<div class="template-task">
+  <div class="content-cards">
+    <div class="row">
+      <div class="col s12">
+        <mz-card class="black-text" [horizontal]="true" [hoverable]="true">
+          <mz-card-image>
+            <i class="fa fa-address-card icon-card" aria-hidden="true"></i>
+          </mz-card-image>
+          <mz-card-title>
+            Meus dados pessoais
+          </mz-card-title>
+          <mz-card-content>
+
+            <div class="row">
+              <div class="col s4">
+                <mz-input-container>
+                  <input mz-input [label]="'Nome'" value="Amauri de Souza" id="" type="text" disabled="true">
+                </mz-input-container>
+              </div>
+              <div class="col s4">
+                <mz-input-container>
+                  <input mz-input [label]="'Email'" value="amauri@teste.com" id="" type="text" disabled="true">
+                </mz-input-container>
+              </div>
+              <div class="col s4">
+                <mz-input-container>
+                  <input mz-input [label]="'Celular'" value="982616362" id="" type="number" disabled="true">
+                </mz-input-container>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s6">
+                <mz-input-container>
+                  <input mz-input [label]="'Usuário'" value="amauri123" id="" type="text" disabled="true">
+                </mz-input-container>
+              </div>
+              <div class="col s6">
+                <mz-input-container>
+                  <input mz-input [label]="'Senha'" value="amauri@teste.com" id="" type="password" disabled="true">
+                </mz-input-container>
+              </div>
+            </div>
+
+          </mz-card-content>
+        </mz-card>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content-buttons z-depth-5">
+    <button mz-button mz-halfway-fab [float]="true" mz-button mz-tooltip [tooltip]="'Editar'" [position]="'left'"
+      [html]="true" [delay]="10"><i class="fa fa-pencil size-icon" aria-hidden="true"></i></button>
+    <button mz-button mz-halfway-fab [float]="true" mz-button mz-tooltip [tooltip]="'Salvar'" [position]="'left'"
+      [html]="true" [delay]="10"><i class="fa fa-save size-icon" aria-hidden="true"></i></button>
+  </div>
+
+</div>
