@@ -87,26 +87,6 @@
                 </div>
               </div>
 
-              <table>
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Item Name</th>
-                    <th>Item Price</th>
-                    <th>Item Price</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr *ngFor="let item of array">
-                    <td>{{item}}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-
-                </tbody>
-              </table>
              <table class="striped centered" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
                 <thead>
                   <tr>
