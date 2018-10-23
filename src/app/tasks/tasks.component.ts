@@ -3,6 +3,19 @@ import { ViewChild } from '@angular/core';
 import { MzCollapsibleComponent } from 'ngx-materialize';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
+export class MyItems {
+  value1: string;
+  value2: string;
+  value3: string;
+  value4: string;
+  constructor(_value1: string, _value2: string, _value3: string, _value4: string) {
+    this.value1 = _value1;
+    this.value2 = _value2;
+    this.value3 = _value3;
+    this.value4 = _value4;
+  }
+}
+
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -16,6 +29,20 @@ export class TasksComponent implements OnInit {
 
   public dateOfBirth = '2017-08-12';
   public data: any;
+  title = '';
+  dtInitial = '';
+  dtEnd = '';
+  description = '';
+  array = new Array();
+  myItems: MyItems[] = new Array();
+
+  // Other variables
+  // IsForUpdate: boolean = false;
+  newItem1: any = {};
+  newItem2: any = {};
+  newItem3: any = {};
+  newItem4: any = {};
+  // updatedItem;
 
   public options: Pickadate.DateOptions = {
     clear: 'Limpar', // Clear button text
@@ -68,8 +95,7 @@ export class TasksComponent implements OnInit {
     weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
   };
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     this.data = [
@@ -132,8 +158,23 @@ export class TasksComponent implements OnInit {
     this.collapsibleMyTasks.open(0);
   }
 
+
   closeAll() {
     this.collapsibleCreateTasks.close(0);
     this.collapsibleMyTasks.close(0);
+  }
+
+  addTask() {
+    this.array.push(this.title, this.dtInitial, this.dtEnd, this.description);
+  }
+
+  AddItem() {
+    this.myItems.push(this.newItem1, this.newItem2, this.newItem3, this.newItem4);
+    this.newItem1 = {};
+    this.newItem2 = {};
+    this.newItem3 = {};
+    this.newItem4 = {};
+    this.collapsibleCreateTasks.close(0);
+    this.collapsibleMyTasks.open(0);
   }
 }

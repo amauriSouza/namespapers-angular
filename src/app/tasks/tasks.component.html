@@ -15,7 +15,8 @@
             <mz-collapsible-item-body>
               <div class="content-form">
                 <div class="column-30">
-                  <mz-input-container>
+
+                <mz-input-container>
                     <input mz-input [label]="'Titulo tarefa'" id="" length="25" type="text" placeholder="Digite um titulo">
                   </mz-input-container>
                 </div>
@@ -48,7 +49,7 @@
               </div>
 
               <div class="content-position">
-                <button mz-button class="style-button">
+                <button mz-button class="style-button" (click)="addTask()">
                   <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Salvar
                 </button>
               </div>
@@ -86,7 +87,27 @@
                 </div>
               </div>
 
-              <table class="striped centered" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>Item Price</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr *ngFor="let item of array">
+                    <td>{{item}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                </tbody>
+              </table>
+             <table class="striped centered" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
                 <thead>
                   <tr>
                     <th style="width: 20%">
