@@ -74,23 +74,18 @@
             <mz-collapsible-item-body>
 
               <div class="content-position__end">
-
-                  <div class="column-20">
-                    <mz-input-container>
-                      <input mz-input type="text" placeholder="Pesquisar">
-                    </mz-input-container>
-                  </div>
-                  <div class="column-10">
-                    <button mz-button class="style-button">
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                  </div>
-
-
-
-
-
+                <div class="column-20">
+                  <mz-input-container>
+                    <input mz-input type="text" placeholder="Pesquisar">
+                  </mz-input-container>
+                </div>
+                <div class="column-10">
+                  <button mz-button class="style-button">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </div>
               </div>
+
               <table class="striped centered" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
                 <thead>
                   <tr>
@@ -149,6 +144,9 @@
 
     <button mz-button mz-halfway-fab [float]="true" mz-button mz-tooltip [tooltip]="'Limpar Campos'" [position]="'left'"
       [html]="true" [delay]="10"><i class="fa fa-eraser size-icon" aria-hidden="true"></i></button>
+
+    <button mz-button mz-halfway-fab [float]="true" mz-button mz-tooltip [tooltip]="'Voltar'" [position]="'left'"
+      [html]="true" [delay]="10"><i class="fa fa-arrow-left size-icon" aria-hidden="true"></i></button>
   </div>
 
 </div>

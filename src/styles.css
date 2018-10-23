@@ -36,3 +36,12 @@ textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #1976d2;
   box-shadow: 0 1px 0 0 #1976d2;
 }
+
+
+.dropdown-content li>a, .dropdown-content li>span {
+  color: #1976d2;
+}
+
+.side-nav .user-view, .side-nav .userView {
+  background-color: #1976d2;
+}
