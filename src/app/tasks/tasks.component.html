@@ -5,58 +5,57 @@
         <span class="title-card">Tarefas</span>
       </mz-card-title>
       <mz-card-content>
-          <mz-collapsible #collapsibleCreateTasks [mode]="'accordion'" [onClose]="closeFunctionCallback" [onOpen]="openFunctionCallback"
-            [popout]="false">
-            <mz-collapsible-item [active]="false">
-              <mz-collapsible-item-header>
-                <i class="fa fa-address-book-o icons-style" id="icoDadosPessoais" aria-hidden="true"></i><span class="title-box">Criação
-                  Tarefa</span>
-              </mz-collapsible-item-header>
-              <mz-collapsible-item-body>
-                <div class="content-form">
-                  <div class="column-30">
-                    <mz-input-container>
-                      <input mz-input [label]="'Titulo tarefa'" id="" length="25" type="text"
-                        placeholder="Digite um titulo">
-                    </mz-input-container>
-                  </div>
-                  <div class="column-30">
-                    <mz-datepicker-container class="col s12">
-                      <i mz-icon-mdi mz-input-prefix>
-                      </i>
-                      <input mz-datepicker [label]="'Data Início'" [options]="options" id="datepicker" placeholder="Selecione uma data"
-                        type="text">
-                    </mz-datepicker-container>
-                  </div>
-
-                  <div class="column-30">
-                    <mz-datepicker-container class="col s12">
-                      <i mz-icon-mdi mz-input-prefix>
-                      </i>
-                      <input mz-datepicker [label]="'Date Termíno'" [options]="options" id="datepicker" placeholder="Selecione uma data"
-                        type="text">
-                    </mz-datepicker-container>
-                  </div>
+        <mz-collapsible #collapsibleCreateTasks [mode]="'accordion'" [onClose]="closeFunctionCallback" [onOpen]="openFunctionCallback"
+          [popout]="false">
+          <mz-collapsible-item [active]="false">
+            <mz-collapsible-item-header>
+              <i class="fa fa-address-book-o icons-style" id="icoDadosPessoais" aria-hidden="true"></i><span class="title-box">Criação
+                Tarefa</span>
+            </mz-collapsible-item-header>
+            <mz-collapsible-item-body>
+              <div class="content-form">
+                <div class="column-30">
+                  <mz-input-container>
+                    <input mz-input [label]="'Titulo tarefa'" id="" length="25" type="text" placeholder="Digite um titulo">
+                  </mz-input-container>
+                </div>
+                <div class="column-30">
+                  <mz-datepicker-container class="col s12">
+                    <i mz-icon-mdi mz-input-prefix>
+                    </i>
+                    <input mz-datepicker [label]="'Data Início'" [options]="options" id="datepicker" placeholder="Selecione uma data"
+                      type="text">
+                  </mz-datepicker-container>
                 </div>
 
-                <div class="content-form">
-                  <div class="column-100">
-                    <mz-textarea-container>
-                      <textarea mz-textarea [label]="'Descrição da Tarefa'" id="" placeholder="Digite uma descrição"
-                        length="100"></textarea>
-                    </mz-textarea-container>
-                  </div>
+                <div class="column-30">
+                  <mz-datepicker-container class="col s12">
+                    <i mz-icon-mdi mz-input-prefix>
+                    </i>
+                    <input mz-datepicker [label]="'Date Termíno'" [options]="options" id="datepicker" placeholder="Selecione uma data"
+                      type="text">
+                  </mz-datepicker-container>
                 </div>
+              </div>
 
-                <div class="content-position">
-                  <button mz-button class="style-button">
-                    <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Salvar
-                  </button>
+              <div class="content-form">
+                <div class="column-100">
+                  <mz-textarea-container>
+                    <textarea mz-textarea [label]="'Descrição da Tarefa'" id="" placeholder="Digite uma descrição"
+                      length="100"></textarea>
+                  </mz-textarea-container>
                 </div>
+              </div>
 
-              </mz-collapsible-item-body>
-            </mz-collapsible-item>
-          </mz-collapsible>
+              <div class="content-position">
+                <button mz-button class="style-button">
+                  <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Salvar
+                </button>
+              </div>
+
+            </mz-collapsible-item-body>
+          </mz-collapsible-item>
+        </mz-collapsible>
       </mz-card-content>
     </mz-card>
 
@@ -74,6 +73,24 @@
             </mz-collapsible-item-header>
             <mz-collapsible-item-body>
 
+              <div class="content-position__end">
+
+                  <div class="column-20">
+                    <mz-input-container>
+                      <input mz-input type="text" placeholder="Pesquisar">
+                    </mz-input-container>
+                  </div>
+                  <div class="column-10">
+                    <button mz-button class="style-button">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </div>
+
+
+
+
+
+              </div>
               <table class="striped centered" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
                 <thead>
                   <tr>
@@ -100,11 +117,11 @@
                     <td>{{data.dtInitial}}</td>
                     <td>{{data.dtEnd}}</td>
                     <td>{{data.description}}</td>
-                    <td><i class="fa fa-pencil icons-style__table grey-text text-darken-1" mz-tooltip [tooltip]="'Editar'" [position]="'top'"
-                      [html]="true" [delay]="10"  aria-hidden="true"></i><i mz-tooltip [tooltip]="'Marcar como feita'" [position]="'top'"
-                      [html]="true" [delay]="10" class="fa fa-check-circle-o icons-style__table green-text"
-                        aria-hidden="true"></i><i mz-tooltip [tooltip]="'Excluir'" [position]="'top'"
-                        [html]="true" [delay]="10" class="fa fa-trash-o icons-style__table red-text text-darken-3" aria-hidden="true"></i></td>
+                    <td><i class="fa fa-pencil icons-style__table grey-text text-darken-1" mz-tooltip [tooltip]="'Editar'"
+                        [position]="'top'" [html]="true" [delay]="10" aria-hidden="true"></i><i mz-tooltip [tooltip]="'Marcar como feita'"
+                        [position]="'top'" [html]="true" [delay]="10" class="fa fa-check-circle-o icons-style__table green-text"
+                        aria-hidden="true"></i><i mz-tooltip [tooltip]="'Excluir'" [position]="'top'" [html]="true"
+                        [delay]="10" class="fa fa-trash-o icons-style__table red-text text-darken-3" aria-hidden="true"></i></td>
                   </tr>
                 </tbody>
                 <tfoot>

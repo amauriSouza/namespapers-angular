@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.content-position{
+.content-position {
   display: flex;
   justify-content: center;
 }
@@ -10,7 +10,29 @@
   flex-wrap: wrap;
 }
 
-
 .pagination li.active {
   background-color: #1976d2;
+}
+
+.content-position__end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type='text']:not(.browser-default):focus:not([readonly]),
+input[type='password']:not(.browser-default):focus:not([readonly]),
+input[type='email']:not(.browser-default):focus:not([readonly]),
+input[type='url']:not(.browser-default):focus:not([readonly]),
+input[type='time']:not(.browser-default):focus:not([readonly]),
+input[type='date']:not(.browser-default):focus:not([readonly]),
+input[type='datetime']:not(.browser-default):focus:not([readonly]),
+input[type='datetime-local']:not(.browser-default):focus:not([readonly]),
+input[type='tel']:not(.browser-default):focus:not([readonly]),
+input[type='number']:not(.browser-default):focus:not([readonly]),
+input[type='search']:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #1976d2;
+  box-shadow: 0 1px 0 0 #1976d2;
 }
