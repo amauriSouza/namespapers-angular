@@ -8,5 +8,9 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
 
+
+.pagination li.active {
+  background-color: #1976d2;
 }
