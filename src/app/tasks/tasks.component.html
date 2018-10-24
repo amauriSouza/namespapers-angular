@@ -108,7 +108,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let data of mf.data" id="teste">
+                  <tr *ngFor="let data of mf.data" id="row-task">
                     <td>{{data.title}}</td>
                     <td>{{data.dtInitial}}</td>
                     <td>{{data.dtEnd}}</td>
@@ -116,7 +116,7 @@
                     <td><i class="fa fa-pencil icons-style__table grey-text text-darken-1" mz-tooltip [tooltip]="'Editar'"
                         [position]="'top'" [html]="true" [delay]="10" aria-hidden="true" (click)="editTask()"></i><i mz-tooltip [tooltip]="'Marcar como feita'"
                         [position]="'top'" [html]="true" [delay]="10" class="fa fa-check-circle-o icons-style__table green-text"
-                        aria-hidden="true" (click)="myFunction()"></i><i mz-tooltip [tooltip]="'Excluir'" [position]="'top'" [html]="true"
+                        aria-hidden="true" (click)="isDone ? makeIsDone() : makeUnDone()"></i><i mz-tooltip [tooltip]="'Excluir'" [position]="'top'" [html]="true"
                         [delay]="10" class="fa fa-trash-o icons-style__table red-text text-darken-3" aria-hidden="true"></i></td>
                   </tr>
                 </tbody>

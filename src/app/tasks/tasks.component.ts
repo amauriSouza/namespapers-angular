@@ -22,6 +22,7 @@ export class TasksComponent implements OnInit {
   description = '';
   array = new Array();
   id: any;
+  isDone = true;
 
   public options: Pickadate.DateOptions = {
     clear: 'Limpar', // Clear button text
@@ -151,8 +152,15 @@ export class TasksComponent implements OnInit {
     this.array.push(this.title, this.dtInitial, this.dtEnd, this.description);
   }
 
-  myFunction() {
-    this.id = document.getElementById('teste');
-    this.id.classList.add('mystyle');
+  makeIsDone() {
+    this.id = document.getElementById('row-task');
+    this.id.classList.add('style-row__task');
+    this.isDone = false;
+  }
+
+  makeUnDone() {
+    this.id = document.getElementById('row-task');
+    this.id.classList.remove('style-row__task');
+    this.isDone = true;
   }
 }

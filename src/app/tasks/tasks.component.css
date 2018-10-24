@@ -13,6 +13,7 @@
 .icons-style__table{
   font-size: 20px;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .title-box {
@@ -74,7 +75,7 @@
   background-color: #424242;
 }
 
-.mystyle{
+.style-row__task{
   text-decoration: line-through;
 }
 
