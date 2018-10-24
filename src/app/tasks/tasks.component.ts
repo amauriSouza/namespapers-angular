@@ -21,6 +21,7 @@ export class TasksComponent implements OnInit {
   dtEnd = '';
   description = '';
   array = new Array();
+  id: any;
 
   public options: Pickadate.DateOptions = {
     clear: 'Limpar', // Clear button text
@@ -141,8 +142,17 @@ export class TasksComponent implements OnInit {
     this.collapsibleMyTasks.close(0);
   }
 
+  editTask() {
+    this.collapsibleCreateTasks.open(0);
+    this.collapsibleMyTasks.close(0);
+  }
 
   addTask() {
     this.array.push(this.title, this.dtInitial, this.dtEnd, this.description);
+  }
+
+  myFunction() {
+    this.id = document.getElementById('teste');
+    this.id.classList.add('mystyle');
   }
 }
