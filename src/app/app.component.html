@@ -1,6 +1,4 @@
-<!-- <app-app-header></app-app-header>
-<app-app-sidebar></app-app-sidebar>
-<app-app-footer></app-app-footer> -->
- <!-- <app-login></app-login> -->
-<!-- <app-create-account></app-create-account> -->
+<app-app-header *ngIf="isLogged"></app-app-header>
+<app-app-sidebar *ngIf="isLogged"></app-app-sidebar>
 <router-outlet></router-outlet>
+<app-app-footer *ngIf="isLogged"></app-app-footer>
