@@ -1,0 +1,32 @@
+.template-login {
+  width: 100%;
+  background-color: #1976d2;
+  min-height: 900px;
+}
+
+.login-box {
+  margin-top: 130px;
+  width: 320px;
+  background-color: white;
+  height: 345px;
+  border-radius: 10px;
+}
+
+.login-content {
+  padding: 25px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.style-button {
+  background-color: #424242;
+  border-radius: 20px;
+  text-transform: none;
+}
+
+.title-login {
+  font-size: 35px;
+  color: #424242;
+}
