@@ -26,6 +26,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import {DataTableModule} from 'angular-6-datatable';
 import { ProfileComponent } from './user/profile/profile.component';
+import { CreateAccountComponent } from './auth/create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProfileComponent } from './user/profile/profile.component';
     TasksComponent,
     DashboardComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
